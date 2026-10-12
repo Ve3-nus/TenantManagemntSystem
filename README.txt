@@ -1,19 +1,15 @@
-TenantManagementSystem - BBT3202 Lesson 6 (final version, Data Binding)
+TenantManagementSystem - BBT3202 Navigation Practical 1 (Login, Register, Intents)
 
-HOW TO USE
-1. Create the project in Android Studio (Empty Views Activity, Kotlin), package:
-   com.example.tenantmanagementsystemgroupa
-   (If your package differs, change it in all 3 files + the <variable type="..."> line.)
-2. Apply the Gradle changes in build.gradle.kts.module-app-CHANGES.txt, then Sync Now.
-3. Copy these files over yours:
-   app/src/main/java/com/example/tenantmanagementsystemgroupa/MainActivity.kt
-   app/src/main/java/com/example/tenantmanagementsystemgroupa/Tenant.kt   (new file)
-   app/src/main/res/layout/activity_main.xml
-4. Build > Rebuild Project, then Run.
+Package / namespace: com.example.tenantmanagementsystem
 
-EXPECTED
-- Opens with grey hint "Saved tenant will appear here".
-- John Kamau / 0712345678 / 25000 -> SAVE shows:
-    Tenant: John Kamau
-    Phone: 0712345678
-    Rent: KSh 25000
+Screens
+  LoginActivity     launcher screen; opens Register (explicit), MainActivity (explicit + email),
+                    and the Strathmore website (implicit ACTION_VIEW)
+  RegisterActivity  sends the email back to Login with putExtra("EMAIL") + FLAG_ACTIVITY_CLEAR_TOP
+  MainActivity      Add Tenant screen; CALL TENANT (implicit ACTION_DIAL), SHARE TENANT (ACTION_SEND),
+                    field validation, "Logged in as ..." toast
+
+HOW TO RUN
+1. Open this folder in Android Studio and click Sync Now.
+2. Build > Rebuild Project, then Run.
+3. Use an emulator image with Google Play/Chrome so the website link has a browser to open.

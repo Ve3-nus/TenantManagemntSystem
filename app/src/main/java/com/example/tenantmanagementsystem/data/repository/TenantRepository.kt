@@ -1,6 +1,6 @@
 package com.example.tenantmanagementsystem.data.repository
 
-import com.example.tenantmanagementsystem.Tenant
+import com.example.tenantmanagementsystem.data.model.Tenant
 
 // One shared list of tenants for the whole app
 object TenantRepository {

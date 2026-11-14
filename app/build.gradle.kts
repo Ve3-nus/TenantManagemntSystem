@@ -2,7 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     // NEW: switch Safe Args on for this app.
     // It must come BELOW the android.application line
+    id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs.kotlin")
+
+
 }
 
 android {
@@ -41,6 +44,8 @@ android {
 }
 
 dependencies {
+    implementation("androidx.room:room-runtime:2.7.2")
+    implementation("androidx.room:room-ktx:2.7.2")
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.8")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.8")
     implementation(libs.androidx.activity.ktx)
@@ -54,4 +59,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
     implementation("androidx.fragment:fragment-ktx:1.8.5")
+
+    ksp("androidx.room:room-compiler:2.7.2")
 }

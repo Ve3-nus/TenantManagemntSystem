@@ -6,9 +6,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import androidx.lifecycle.viewModelScope
-import com.example.tenantmanagementsystemgroupa.data.local.TenantDatabase
-import com.example.tenantmanagementsystemgroupa.data.model.Tenant
-import com.example.tenantmanagementsystemgroupa.data.repository.TenantRepository
+import com.example.tenantmanagementsystem.data.local.TenantDatabase
+import com.example.tenantmanagementsystem.data.model.Tenant
+import com.example.tenantmanagementsystem.data.repository.TenantRepository
 import kotlinx.coroutines.launch
 
 // AndroidViewModel: a ViewModel that receives the Application (safe to keep)
